@@ -7,7 +7,7 @@ git commit -m "%DATE% %TIME% %USERDOMAIN%
 git status | find "by"
 :PUSH
 echo 변경여부 %ERRORLEVEL%
-if %ERRORLEVEL% == 1 git push
+if %ERRORLEVEL% == 0 git push
 REM git push timeout 발생시 재시도
 echo push 성공여부 %ERRORLEVEL%
 if %ERRORLEVEL% == 0 goto LOOP
