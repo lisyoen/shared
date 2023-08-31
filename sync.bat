@@ -4,7 +4,7 @@ echo %DATE% %TIME% Check sync
 git pull
 git add .
 git commit -m "%DATE% %TIME% %USERDOMAIN%
-git status | find "by" > nul
+git status | find "by"
 :PUSH
 echo 변경여부 %ERRORLEVEL%
 if %ERRORLEVEL% == 0 (
