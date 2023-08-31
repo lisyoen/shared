@@ -1,4 +1,4 @@
-@echo off
+@echo on
 :LOOP
 echo %DATE% %TIME% Check sync
 git pull
