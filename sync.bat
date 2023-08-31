@@ -6,7 +6,7 @@ git add .
 git commit -m "%DATE% %TIME% %USERDOMAIN%
 git status | find "by"
 :PUSH
-echo 변경여부 %ERRORLEVEL%
+rem echo 변경여부 %ERRORLEVEL%
 if %ERRORLEVEL% == 0 (
 	echo %DATE% %TIME% INFO 변경발생 push 시도
 	git push
