@@ -1,3 +1,4 @@
+@echo off
 :LOOP
 git pull
 git add .
