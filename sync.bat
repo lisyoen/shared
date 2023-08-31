@@ -1,9 +1,8 @@
-@echo off
 :LOOP
 git pull
 git add .
 git commit -m "%DATE% %TIME% %USERDOMAIN%
-git status | find "by"
+git status | find "by" > nul
 :PUSH
 timeout /t 1
 if %ERRORLEVEL% == 1 git push
