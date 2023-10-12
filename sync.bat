@@ -13,11 +13,11 @@ if %ERRORLEVEL% == 0 (
 ) 
 REM git push timeout 발생시 재시도
 if %ERRORLEVEL% == 0 (
-	echo INFO push 성공 → 10초 후 재시도
+	echo INFO push Success → Check again after 10s
 	timeout /t 10 > nul
 	goto LOOP
 ) ELSE (
-	echo %DATE% %TIME% INFO push 실패 → 1초 후 재시도
+	echo %DATE% %TIME% INFO push Fail → Retry in 1s
 	timeout /t 1 > nul
 	GOTO PUSH
 )
