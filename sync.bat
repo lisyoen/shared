@@ -6,16 +6,18 @@ git add .
 git commit -m "%DATE% %TIME% %USERDOMAIN%
 git status | find "by"
 :PUSH
-rem echo º¯°æ¿©ºÎ %ERRORLEVEL%
+rem echo ë³€ê²½ì—¬ë¶€ %ERRORLEVEL%
 if %ERRORLEVEL% == 0 (
-	echo %DATE% %TIME% INFO º¯°æ¹ß»ý push ½Ãµµ
+	echo %DATE% %TIME% INFO ë³€ê²½ë°œìƒ push ì‹œë„
 	git push
 ) 
-REM git push timeout ¹ß»ý½Ã Àç½Ãµµ
+REM git push timeout ë°œìƒì‹œ ìž¬ì‹œë„
 if %ERRORLEVEL% == 0 (
+	echo INFO push ì„±ê³µ â†’ 10ì´ˆ í›„ ìž¬ì‹œë„
+	timeout /t 10 > nul
 	goto LOOP
 ) ELSE (
-	echo %DATE% %TIME% INFO push ½ÇÆÐ ¡æ 1ÃÊ ÈÄ Àç½Ãµµ
+	echo %DATE% %TIME% INFO push ì‹¤íŒ¨ â†’ 1ì´ˆ í›„ ìž¬ì‹œë„
 	timeout /t 1 > nul
 	GOTO PUSH
 )
