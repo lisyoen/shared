@@ -8,7 +8,7 @@ git status | find "by"
 :PUSH
 rem echo 변경여부 %ERRORLEVEL%
 if %ERRORLEVEL% == 0 (
-	echo %DATE% %TIME% INFO Change detected trying push
+	echo %DATE% %TIME% INFO Changes are detected and a push is attempted
 	git push
 ) 
 REM git push timeout 발생시 재시도
